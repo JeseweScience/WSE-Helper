@@ -7,3 +7,4 @@ pypng
 Pillow
 pyzbar
 requests
+ctypes

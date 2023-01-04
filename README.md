@@ -1,2 +1,3 @@
-# WSE-Helper
-WSE Helper is a versatile and user-friendly software program that provides a range of useful tools for internet users.
+# WSE Helper
+
+WSE Helper is a versatile and user-friendly software program that provides a range of useful tools for internet users. It includes an IP Checker, which allows you to check the IP address of a device, a QR Code Generator, which enables you to create QR codes for use in marketing materials or to share information quickly and easily, a QR Code Decoder, which allows you to scan and decode QR codes to access the information they contain, a Link Shortener, which lets you create shorter, more manageable links to share online, and a YouTube Viewer Bot, which helps you increase the number of views on your YouTube videos. WSE Helper is the perfect tool for you.

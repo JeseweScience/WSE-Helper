@@ -1,0 +1,9 @@
+colorama
+selenium
+webdriver-manager
+pyshorteners
+pyqrcode
+pypng
+Pillow
+pyzbar
+requests

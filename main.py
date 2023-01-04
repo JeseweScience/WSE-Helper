@@ -7,7 +7,7 @@ from modif.updater import *
 
 # CODE BY JESEWE HACK
 
-import os, sys, webbrowser, time, pymem, version
+import os, sys, webbrowser, time, pymem, version, ctypes
 from colorama import Fore, init
 init()
 

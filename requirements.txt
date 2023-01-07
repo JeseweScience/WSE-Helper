@@ -1,10 +1,13 @@
 colorama
 selenium
+ctypes
+folium
+psutil
+numpy
 webdriver-manager
-pyshorteners
 pyqrcode
 pypng
-Pillow
-pyzbar
 requests
-ctypes
+gTTS
+Pillow
+requests

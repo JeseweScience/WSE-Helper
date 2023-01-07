@@ -18,4 +18,4 @@ def qrcode():
 	else:
 		url.show()
 		print(Fore.YELLOW + f'\nA {qrcode}.png file has been created in the qrcodes folder.')
-		main = input(Fore.GREEN + "\nDone, press Enter to continue... ")
+		input(Fore.GREEN + "\nDone, press Enter to continue... ")

@@ -1,4 +1,4 @@
-import os, sys, time
+import os, time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -26,11 +26,12 @@ def youtube_view():
 			driver.get(link)
 		except Exception:
 			input(Fore.RED + '\nError: Invalid Argument, press Enter to continue... ')
+			driver.quit()
 			pass
 		else:
 			for i in range(views):
 				time.sleep(20)
 				driver.refresh()
 		finally:
-			print(Fore.GREEN + '\nDone, press Enter to continue... ')
+			input(Fore.GREEN + '\nDone, press Enter to continue... ')
 			pass

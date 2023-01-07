@@ -1,11 +1,12 @@
 import requests
 import webbrowser
-import version, os, re
+import version, os, re, ctypes
 from colorama import Fore, init
 init()
 
 def check_update():
     os.system('cls')
+    ctypes.windll.kernel32.SetConsoleTitleW('Check For Updates')
     print(Fore.GREEN + 'Checking for updates...')
     local_version = version.ver
     try:
@@ -20,6 +21,6 @@ def check_update():
             try:
                 webbrowser.open('https://github.com/Jesewe-Hack/WSE-Helper/releases')
             except:
-                input(Fore.CYAN + "No updates found, press Enter to continue... ")
+                print(Fore.CYAN + "No updates found... ")
         else:
-            input(Fore.CYAN + "No updates found, press Enter to continue... ")
+            print(Fore.CYAN + "No updates found... ")

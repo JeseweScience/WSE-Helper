@@ -1,6 +1,5 @@
 colorama
 selenium
-ctypes
 folium
 psutil
 numpy
@@ -9,5 +8,6 @@ pyqrcode
 pypng
 requests
 gTTS
+speedtest-cli
 Pillow
 requests

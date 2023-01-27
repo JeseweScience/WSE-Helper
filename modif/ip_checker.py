@@ -1,8 +1,14 @@
-import requests, os, time, folium
+import requests, os, time, folium, socket
 from colorama import Fore, init
 init()
 
-def get_info_by_ip(ip='127.0.0.1'):
+banner="""
+_ ___     _ _  _ ____ ____ ____ _  _ ____ ___ _ ____ _  _  
+| |__]    | |\ | |___ |  | |__/ |\/| |__|  |  | |  | |\ | 
+| |       | | \| |    |__| |  \ |  | |  |  |  | |__| | \|
+"""
+
+def get_info_by_ip(ip=''):
     if not os.path.isdir("ip-list"):
         os.mkdir("ip-list")
     try:
@@ -30,5 +36,7 @@ def get_info_by_ip(ip='127.0.0.1'):
 
 def ip_check():
     os.system("cls")
-    ip = input(Fore.RED + "Enter target ip: " + Fore.CYAN)
+    print(Fore.GREEN + banner)
+    print(Fore.YELLOW + '\nYour ip address: ' + socket.gethostbyname(socket.gethostname()))
+    ip = input(Fore.RED + "\nEnter target ip: " + Fore.CYAN)
     get_info_by_ip(ip=ip)

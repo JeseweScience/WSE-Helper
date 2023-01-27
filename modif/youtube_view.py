@@ -5,9 +5,17 @@ from webdriver_manager.chrome import ChromeDriverManager
 from colorama import Fore, init
 init()
 
+banner="""
+_   _ ____ _  _ ___ _  _ ___  ____    _  _ _ ____ _ _ _ ____ ____ 
+ \_/  |  | |  |  |  |  | |__] |___    |  | | |___ | | | |___ |__/ 
+  |   |__| |__|  |  |__| |__] |___     \/  | |___ |_|_| |___ |  \ 
+
+"""
+
 def youtube_view():
 	os.system("cls")
-	print(Fore.YELLOW + 'WARNING: Perhaps YouTube will remove cheated views after a while!')
+	print(Fore.GREEN + banner)
+	print(Fore.YELLOW + '\nWARNING: Perhaps YouTube will remove cheated views after a while!')
 	print(Fore.GREEN + 'INFO: The more views you put, the more the program will work, 1 view is wound up in 20 seconds.\nTo end the program press CTRL + C.')
 	try:
 		link=input(Fore.GREEN + "\nEnter the link to the youtube video: " + Fore.CYAN)

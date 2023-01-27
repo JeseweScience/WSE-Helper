@@ -4,8 +4,15 @@ import psutil
 from colorama import Fore, init
 init()
 
+banner="""
+____ _    ____ ____ _  _ ____ ____  
+|    |    |___ |__| |\ | |___ |__/  
+|___ |___ |___ |  | | \| |___ |  \  
+"""
+
 def temp_cleaner():
-    os.system('cls') 
+    os.system('cls')
+    print(Fore.GREEN + banner)
     folder = 'C:/Users/'+os.getlogin()+'/AppData/Local/Temp'
     deleteFileCount = 0
     deleteFolderCount = 0
@@ -25,7 +32,7 @@ def temp_cleaner():
 
         except Exception as e:
             pass
-    print(Fore.GREEN + 'Temp folder cleared successfully... ')
+    print(Fore.GREEN + '\nTemp folder cleared successfully... ')
 
 def dump_cleaner():
     folder = 'C:/Users/'+os.getlogin()+'/AppData/Local/CrashDumps'

@@ -4,11 +4,23 @@ import time, os
 from colorama import Fore, init
 init()
 
+banner="""
+____ ____    ____ ____ ___  ____ 
+|  | |__/    |    |  | |  \ |___ 
+|_\| |  \    |___ |__| |__/ |___ 
+
+____ ____ _  _ ____ ____ ____ ___ ____ ____ 
+| __ |___ |\ | |___ |__/ |__|  |  |  | |__/   
+|__] |___ | \| |___ |  \ |  |  |  |__| |  \    
+
+"""
+
 def qrcode():
 	os.system("cls")
+	print(Fore.GREEN + banner)
 	if not os.path.isdir("qrcodes"):
 		os.mkdir("qrcodes")
-	qrcode=input(Fore.GREEN + 'Enter qrcode name: ' + Fore.CYAN)
+	qrcode=input(Fore.GREEN + '\nEnter qrcode name: ' + Fore.CYAN)
 	mt=input(Fore.GREEN + 'Enter link or text: ' + Fore.CYAN)
 	try:
 		url = pyqrcode.create(mt)

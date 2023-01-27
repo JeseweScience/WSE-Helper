@@ -3,8 +3,16 @@ import os, time, ctypes
 from colorama import Fore, init
 init()
 
+banner="""
+___ ____ _  _ ___    ___ ____    ____ ___  ____ ____ ____ _  _   
+ |  |___  \/   |      |  |  |    [__  |__] |___ |___ |    |__|   
+ |  |___ _/\_  |      |  |__|    ___] |    |___ |___ |___ |  |   
+
+"""
+
 def text_to_speech():
     os.system('cls')
+    print(Fore.GREEN + banner)
     if not os.path.isdir("text-to-speech"):
         os.mkdir("text-to-speech")
     s = input(Fore.GREEN + "Enter the File name (For example sample.txt): " + Fore.CYAN)
@@ -20,4 +28,5 @@ def text_to_speech():
     except Exception:
         input(Fore.RED + '\nError: Invalid Value, press Enter to continue... ')
     else:
-        input(Fore.GREEN + f"\nDone the {f1} file has been saved in the 'text-to-speech' folder, press Enter to continue... ")
+        print(Fore.YELLOW + f"\nDone the '{f1}' file has been saved in the 'text-to-speech' folder.")
+        input(Fore.GREEN + "\nDone, press Enter to continue... ")

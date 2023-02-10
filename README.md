@@ -35,9 +35,9 @@
   </ol>
 </details>
 
-### About The Project
+## About The Project
 
-WSE Helper is a versatile and user-friendly software program that provides a range of useful tools for internet users. It includes an IP Checker, which allows you to check the IP address of a device, a QR Code Generator, which enables you to create QR codes for use in marketing materials or to share information quickly and easily, a QR Code Decoder, which allows you to scan and decode QR codes to access the information they contain, a Link Shortener, which lets you create shorter, more manageable links to share online, and a YouTube Viewer Bot, which helps you increase the number of views on your YouTube videos. WSE Helper is the perfect tool for you.
+WSE Helper is a powerful tool that brings together many useful features and mini-games. The program offers many tools, such as YouTube Viewer, which allows you to boost YouTube video views. Ip Information helps you find out information about your or someone else's IP address. QR Code Generator will allow you to generate QR codes for storing and transmitting information. Text to Speech offers a speech synthesis feature to help you listen to text in audio format. Speedtest Internet will help you check your internet speed. NickName Generator will generate a new nickname for you. In addition, the program has mini-games such as Hangman, Number Guessing, Dice Simulation to help you relax and get carried away. All in all, WSE Helper is a comprehensive tool to help you improve your daily experience and speed up your tasks. You can use it to watch videos, get IP address information, generate QR codes, speech synthesis, check internet speed, create nicknames, and have fun with mini games. WSE Helper is the ideal solution for those who value efficiency and convenience.
 
 ## Licence
 

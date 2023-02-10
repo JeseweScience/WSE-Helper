@@ -1,5 +1,5 @@
 from gtts import gTTS
-import os, time, ctypes
+import os, time, ctypes, logging
 from colorama import Fore, init
 init()
 
@@ -26,7 +26,9 @@ def text_to_speech():
         f1 = input(Fore.GREEN + "\nEnter the Audio name to be saved (For example sample.mp3): " + Fore.YELLOW)
         obj.save('text-to-speech/' + f1)
     except Exception:
+        logging.error(f'Error: Invalid value')
         input(Fore.RED + '\nError: Invalid Value, press Enter to continue... ')
     else:
+        logging.debug(f"The file '{f1}' is saved in the 'text-to-speech' folder.")
         print(Fore.YELLOW + f"\nDone the '{f1}' file has been saved in the 'text-to-speech' folder.")
         input(Fore.GREEN + "\nDone, press Enter to continue... ")

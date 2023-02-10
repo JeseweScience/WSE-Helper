@@ -1,6 +1,5 @@
-import pyqrcode
-import png
-import time, os
+import pyqrcode, png
+import time, os, logging
 from colorama import Fore, init
 init()
 
@@ -26,8 +25,10 @@ def qrcode():
 		url = pyqrcode.create(mt)
 		url.png(f'qrcodes/{qrcode}.png', scale=8)
 	except Exception as e:
+		logging.error("The program could not find the folder 'qrcode'")
 		input(Fore.RED + '\nFailed to find qrcodes folder, press Enter to continue... ')
 	else:
 		url.show()
+		logging.debug(f'A {qrcode}.png file has been created in the qrcodes folder.')
 		print(Fore.YELLOW + f'\nA {qrcode}.png file has been created in the qrcodes folder.')
 		input(Fore.GREEN + "\nDone, press Enter to continue... ")

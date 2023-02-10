@@ -21,6 +21,7 @@ def youtube_view():
 		link=input(Fore.GREEN + "\nEnter the link to the youtube video: " + Fore.CYAN)
 		views=int(input(Fore.GREEN + "How many views do you want: " + Fore.RED))
 	except Exception as e:
+		logging.error(f'Error: Invalid value')
 		input(Fore.RED + '\nError: Invalid Value, press Enter to continue... ')
 		pass
 	else:
@@ -33,6 +34,7 @@ def youtube_view():
 		try:
 			driver.get(link)
 		except Exception:
+			logging.error(f'Error: Invalid Argument')
 			input(Fore.RED + '\nError: Invalid Argument, press Enter to continue... ')
 			driver.quit()
 			pass
@@ -41,5 +43,6 @@ def youtube_view():
 				time.sleep(20)
 				driver.refresh()
 		finally:
+			logging.debug(f'Views were successfully boosted')
 			input(Fore.GREEN + '\nDone, press Enter to continue... ')
 			pass

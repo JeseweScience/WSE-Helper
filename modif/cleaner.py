@@ -1,6 +1,4 @@
-import os
-import shutil
-import psutil
+import os, shutil, psutil, logging
 from colorama import Fore, init
 init()
 
@@ -32,6 +30,7 @@ def temp_cleaner():
 
         except Exception as e:
             pass
+    logging.debug('The user cleared the temporary folder')
     print(Fore.GREEN + '\nTemp folder cleared successfully... ')
 
 def dump_cleaner():
@@ -56,4 +55,5 @@ def dump_cleaner():
 
         except Exception as e:
             pass
+    logging.debug('The user cleared the crashdump folder')
     input(Fore.GREEN + 'CrashDumps folder cleared successfully, press Enter to continue... ')

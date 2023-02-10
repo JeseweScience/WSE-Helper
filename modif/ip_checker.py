@@ -1,4 +1,4 @@
-import requests, os, time, folium, socket
+import requests, os, time, folium, socket, logging
 from colorama import Fore, init
 init()
 
@@ -29,7 +29,9 @@ def get_info_by_ip(ip=''):
             print(Fore.CYAN + f'{k} : {v}')
         area = folium.Map(location=[response.get('lat'), response.get('lon')])
         area.save(f'ip-list/{response.get("query")}_{response.get("city")}.html')
+        logging.debug(f'The user learns about the IP address: {ip}')
     except:
+        logging.error('Failed to get response to request')
         input(Fore.RED + "Failed to get response to request, press Enter to continue... ")
     else:
         input(Fore.GREEN + "\nDone, press Enter to continue... ")

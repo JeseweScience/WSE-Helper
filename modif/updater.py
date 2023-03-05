@@ -1,6 +1,6 @@
 import requests
 import webbrowser
-import version, os, re, ctypes, logging
+import version, os, re, ctypes
 from colorama import Fore, init
 init()
 
@@ -12,19 +12,15 @@ def check_update():
     try:
         response = requests.get('https://pastebin.com/raw/mpHsjd76').text
     except:
-        logging.error('Failed to get latest version')
         input(Fore.RED + "Failed to get latest version, press Enter to continue... ")
         response = None
     if response != None:
         github_version = float(re.split('=', response.strip())[1])
         if github_version > local_version:
-            logging.debug(f'Found new version: {github_version}')
             print(Fore.GREEN + f'\nFound new version: {github_version}')
             try:
                 webbrowser.open('https://github.com/JeseweScience/WSE-Helper/releases')
             except:
-                logging.debug('No updates found')
                 print(Fore.CYAN + "No updates found... ")
         else:
-            logging.debug('No updates found')
             print(Fore.CYAN + "No updates found... ")

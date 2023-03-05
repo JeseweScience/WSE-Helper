@@ -1,9 +1,7 @@
 colorama
-selenium
 folium
 psutil
 numpy
-webdriver-manager
 pyqrcode
 pypng
 requests
@@ -11,3 +9,6 @@ gTTS
 speedtest-cli
 Pillow
 requests
+dnspython
+beautifulsoup4
+pytube

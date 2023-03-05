@@ -1,4 +1,4 @@
-import random, os, logging
+import random, os
 from colorama import Fore, init
 init()
 
@@ -13,8 +13,8 @@ ____ ____ _  _ ____ ____ ____ ___ ____ ____
 
 """
 
-adjectives = ["Clumsy", "Bored", "Dizzy", "Repulsive", "Scary", "Amusedly", "Worried", "Calm", "Friendly", "Exuberant", "Empty", "Gentle", "Dangerous", "Cool", "Funny", "Crazy", "Awesome", "Weird", "Silly", "Quirky", "Unusual", "Alert", "Beautiful", "Expensive", "Famous", "Sleepy", "Shy", "Innocent", "Inquisitive", "Vast", "Tender", "Tame", "Good", "Shaky", "Sharp", "Breezy", "Broken", "Cold", "Dry", "Hot"]
-nouns = ["Person", "Penguin", "Kangaroo", "Unicorn", "Dragon", "Gorilla", "Squirrel", "Worker", "Doctor", "Scientist", "Engineer", "Astronaut", "Explorer", "Butterfly", "Cat", "Crocodile", "Deer", "Dolphin", "Dragon", "Elephant", "Fish", "Fox", "Giraffe", "Horse", "Kangaroo", "Lion", "Monkey", "Owl", "Panda", "Parrot", "Penguin", "Pig", "Rabbit", "Rat", "Shark", "Squirrel", "Tiger", "Turtle", "Wolf", "Zebra", "Ant", "Bee", "Caterpillar", "Centipede", "Spider", "Camel", "Cheetah", "Chicken", "Crab", "Deer", "Duck", "Eagle", "Elephant", "Flamingo", "Gorilla", "Hippopotamus", "Jaguar", "Kangaroo", "Lion", "Moose", "Ostrich", "Panther", "Quail", "Raccoon", "Snail", "Turkey", "Uakari", "Vulture", "Wombat", "Xerus", "Yak", "Zebra", "Aardvark", "Bison", "Cheetah", "Deer", "Elk", "Fox", "Giraffe", "Hawk", "Iguana", "Jaguar", "Kangaroo", "Llama", "Mule", "Newt", "Otter", "Puma", "Quokka", "Raccoon", "Squirrel", "Toad", "Uakari", "Vole", "Walrus", "Xerus", "Yak", "Zebra"]
+adjectives = ["null","ebola","moe","warlord","pusher","simple","sample","mortis","switch","kill","cromwell", "", "", "", "wizard", "", "tasmanian", "nightmare", "drugstore", "hugh", "neil", "dewclaws", "skoomahead", "tom", "freak", "bailey", "helga", "immortal", "creepy", "dead", "fabulous", "jack", "flakes", "princess", "gene", "sentinel", "error404", "buckshot", "serana", "payton", "guillotine", "greely", "holly", "horny", "twitch", "sam", "tony", "riff", "mercury", "Fester", "IvAnA", "Mighty", "Nick", "OcTaViUs", "ViRUs", "Lars", "Omega", "Vagabond", "ziggy", "obgyn", "Charles", "Hunter", "Candy", "Lover", "Miss", "Deadbolt", "ironbum", "vigilante", "ring", "slow", "faSt", "siRen", "little", "Dan", "baloo", "mad"]
+nouns = ["", "", "kotackbas","devil", "mako", "king", "cowboy", "mungous", "evert", "tripp", "baxter", "horton", "calvert", "faustinus", "julian", "tyon", "borislaw", "admon", "urunir", "norville", "gebhard", "roux", "fangar", "lenox", "danto", "sarkin", "emmett", "maugrim", "lucas", "brigham", "hawthorne", "laurent", "hamel", "everhard", "lister", "tyvrik", "jarlath", "lazarus", "ransley", "aurri", "karles", "dodd", "jasper", "armand", "cain", "marcel", "mikal", "lestat", "godwin", "hendrick", "friduwulf", "milo", "cassian", "edsel", "melchior", "straker", "balto", "ernald", "gallien", "lyre", "urien", "draven", "shadwyn"]
 
 def generate_nickname():
     adjective = random.choice(adjectives)
@@ -29,19 +29,14 @@ def nickname_gen():
     try:
         i=int(input(Fore.GREEN + 'How many nicknames do you want to generate? (Min=1 | Max=30) > ' + Fore.CYAN))
     except ValueError:
-        logging.error(f'Error: Invalid value')
         input(Fore.RED + '\nError: Invalid Value, press Enter to continue... ')
         pass
     else:
         if 1<=i<=30:
             for i in range(i):
                 print(Fore.YELLOW + "Your nickname is: " + Fore.RED + generate_nickname())
-            
-            logging.debug(f'User generated {i} nicknames')
             input(Fore.GREEN + "\nDone, press Enter to continue... ")
         elif i<=0:
-            logging.error('The user entered too lower a number to generate a nickname.')
             input(Fore.RED + '\nError: You entered a lower number, press Enter to continue... ')
         else:
-            logging.error('The user entered too large a number to generate a nickname.')
             input(Fore.RED + '\nError: You entered a large number, press Enter to continue... ')

@@ -1,5 +1,5 @@
 import speedtest
-import time, os, logging
+import time, os
 from colorama import Fore, init
 init()
 
@@ -29,9 +29,7 @@ def speedtest():
 		upload = st.upload()
 		print(Fore.GREEN + '\nDownload Speed: ' + size(download))
 		print('Upload Speed: ' + size(upload))
-		logging.debug(f'A speed test has been played, Download Speed : ' + size(download) + ', Upload Speed : ' + size(upload))
 	except Exception:
-		logging.error('Failed to recognize internet speed')
 		input(Fore.RED + '\nFailed to recognize internet speed, press Enter to continue... ')
 	finally:
 		input(Fore.GREEN + "\nDone, press Enter to continue... ")
